@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["env", { "modules": false }]
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        ["env", { "targets": { "node": "current" }}]
+      ],
+      "plugins": ["angularjs-annotate"]
+    },
+    "development": {
+      "presets": [
+        ["env", { "targets": { "node": "stage-0" }}]
+      ],
+      "plugins": ["angularjs-annotate"]
+    },
+    "test": {
+      "presets": [
+        ["env", { "targets": { "node": "current" }}]
+      ]
+    }
+  }
+}
