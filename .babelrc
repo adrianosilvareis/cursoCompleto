@@ -11,7 +11,7 @@
     },
     "development": {
       "presets": [
-        ["env", { "targets": { "node": "stage-0" }}]
+        ["env", { "targets": { "node": "current" }}]
       ],
       "plugins": ["angularjs-annotate"]
     },
