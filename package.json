@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "webpack-dev-server",
-    "server": "nodemon server.js"
+    "start": "webpack-dev-server -d",
+    "server": "NODE_ENV=production node server.js",
+    "build":"webpack -p"
   },
   "author": "",
   "license": "ISC",

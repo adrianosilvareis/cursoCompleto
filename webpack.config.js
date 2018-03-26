@@ -37,7 +37,8 @@ const config = {
   plugins:[
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'app', 'index.html')
-    })
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ]
 }
 
