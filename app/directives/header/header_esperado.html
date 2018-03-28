@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>
+      <!-- ngIf: logo.src -->
+      <span ng-class="{'text-hide': logo.src}" class="ng-binding">Home</span>
+    </h1>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand ng-binding" href="#!/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navBar">
+    <ul class="navbar-nav">
+      <!-- ngRepeat: page in menu.pages -->
+      <li class="nav-item ng-scope" ng-repeat="page in menu.pages">
+        <a id="contatos" name="contatos" class="nav-link ng-binding" href="unsafe:about:blank#!/contatos" title="Contatos">Contatos</a>
+      </li>
+      <!-- end ngRepeat: page in menu.pages -->
+      <li class="nav-item ng-scope" ng-repeat="page in menu.pages">
+        <a id="user" name="user" class="nav-link ng-binding" href="unsafe:about:blank#!/users" title="Usuários">Usuários</a>
+      </li>
+      <!-- end ngRepeat: page in menu.pages -->
+      <!-- ngRepeat: drop in menu.dropdown -->
+      <li class="nav-item dropdown ng-scope" ng-repeat="drop in menu.dropdown">
+        <a class="nav-link dropdown-toggle ng-binding" id="pages" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Mapa do site</a>
+        <div class="dropdown-menu" aria-labelledby="pages">
+          <!-- ngRepeat: item in drop.itens -->
+          <a class="dropdown-item ng-binding ng-scope" ng-repeat="item in drop.itens" id="contatos" name="contatos" href="unsafe:about:blank#!/contatos">Contatos</a>
+          <!-- end ngRepeat: item in drop.itens -->
+          <a class="dropdown-item ng-binding ng-scope" ng-repeat="item in drop.itens" id="user" name="user" href="unsafe:about:blank#!/users">Usuários</a>
+          <!-- end ngRepeat: item in drop.itens -->
+        </div>
+      </li>
+      <!-- end ngRepeat: drop in menu.dropdown -->
+    </ul>
+  </div>
+</nav>

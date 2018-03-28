@@ -1,13 +1,16 @@
-
 <div class="row">
   <div class="col-md-12">
-    <h1><img ng-src="{{logo.src}}" alt="{{logo.title}}" ng-if="logo.src"> <span ng-class="{'text-hide': logo.src}">{{ logo.title }}</span></h1>
+    <h1>
+      <img ng-src="{{logo.src}}" alt="{{logo.title}}" ng-if="logo.src">
+      <span ng-class="{'text-hide': logo.src}">{{ logo.title }}</span>
+    </h1>
   </div>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#!/">{{ logo.title }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false"
+    aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -15,31 +18,19 @@
     <ul class="navbar-nav">
 
       <li class="nav-item" ng-repeat="page in menu.pages">
-        <a id="{{ page.name }}" name="{{ page.name }}" 
-          class="nav-link" 
-          href="#!/{{ page.link }}" 
-          title="{{ page.title }}">
-            {{ page.title }}
-          </a>
+        <a id="{{ page.name }}" name="{{ page.name }}" class="nav-link" href="#!/{{ page.link }}" title="{{ page.title }}">
+          {{ page.title }}
+        </a>
       </li>
 
       <li class="nav-item dropdown" ng-repeat="drop in menu.dropdown">
-        <a class="nav-link dropdown-toggle" 
-          id="{{ drop.name }}" 
-          role="button" 
-          data-toggle="dropdown" 
-          aria-haspopup="true" 
-          aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="{{ drop.name }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ drop.title }}
         </a>
         <div class="dropdown-menu" aria-labelledby="{{ drop.name }}">
-          <a class="dropdown-item" 
-            ng-repeat="item in drop.itens"  
-            id="{{ item.name }}" 
-            name="{{ item.name }}" 
-            href="#!/{{ item.link }}">
-              {{ item.title }}
-            </a>
+          <a class="dropdown-item" ng-repeat="item in drop.itens" id="{{ item.name }}" name="{{ item.name }}" href="#!/{{ item.link }}">
+            {{ item.title }}
+          </a>
         </div>
       </li>
 

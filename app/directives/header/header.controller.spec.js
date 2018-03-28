@@ -3,7 +3,7 @@ import 'angular-mocks'
 
 import './index'
 
-describe('Diretiva Header', () => {
+describe('Controller Header', () => {
 
   let $scope, controller
 
